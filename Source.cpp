@@ -23,7 +23,11 @@ int main()
 	unsigned int n;
 	printf("\n\nHow many character you want to shift : ");
 	scanf("%u", &n);
-
+	if (n <= 0 || n > 25)
+	{
+		printf("Invalid input");
+		return 0;
+	}
 	for (int i = 0; i < a; i++)
 	{
 		Cipher(plainText[i],n);
